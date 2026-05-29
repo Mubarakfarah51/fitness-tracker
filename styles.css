@@ -683,6 +683,166 @@ body {
 
 .modal-input:focus { outline: none; border-color: var(--orange); }
 
+/* CALORIE BAR */
+.cal-bar-bg {
+  height: 6px;
+  background: var(--border);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.cal-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--green), var(--orange));
+  border-radius: 3px;
+  width: 0%;
+  transition: width 0.4s;
+}
+
+.macro-target {
+  font-size: 10px;
+  color: #555;
+  margin-top: 2px;
+}
+
+/* ADD FOOD */
+.add-food-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.food-search-row {
+  display: flex;
+  gap: 8px;
+}
+
+.food-suggestions {
+  margin-top: 8px;
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.food-sug-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  background: var(--black);
+}
+
+.food-sug-item:active { border-color: var(--orange); }
+
+.food-sug-name { font-size: 13px; font-weight: 500; }
+.food-sug-detail { font-size: 11px; color: var(--muted); margin-top: 2px; }
+.food-sug-cals { font-family: 'Bebas Neue', sans-serif; font-size: 20px; color: var(--orange); white-space: nowrap; }
+.food-sug-unit { font-size: 9px; color: var(--muted); text-align: right; }
+
+.food-custom-form {
+  margin-top: 12px;
+  padding: 14px;
+  background: var(--black);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.custom-food-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--orange);
+}
+
+.custom-food-inputs {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.custom-food-inputs .input-group label { font-size: 9px; }
+.custom-food-inputs .modal-input { padding: 10px 6px; font-size: 14px; }
+
+@media (max-width: 500px) {
+  .custom-food-inputs { grid-template-columns: repeat(3, 1fr); }
+}
+
+.quick-adds {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+
+.quick-label { font-size: 11px; color: var(--muted); }
+
+.quick-btn {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  transition: all 0.2s;
+}
+
+.quick-btn:active { background: var(--orange); border-color: var(--orange); }
+
+/* FOOD LOG */
+.food-log { display: flex; flex-direction: column; gap: 6px; }
+
+.food-log-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.food-log-left {}
+.food-log-name { font-size: 13px; font-weight: 500; }
+.food-log-macros { font-size: 11px; color: var(--muted); margin-top: 2px; }
+
+.food-log-right { display: flex; align-items: center; gap: 12px; }
+.food-log-cals { font-family: 'Bebas Neue', sans-serif; font-size: 20px; color: var(--orange); }
+
+.food-log-delete {
+  background: none;
+  border: none;
+  color: #ff4444;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px;
+  opacity: 0.5;
+}
+
+.food-log-delete:active { opacity: 1; }
+
+.food-log-empty {
+  text-align: center;
+  padding: 24px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
 /* SUPPLEMENTS */
 .supp-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .supp-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 18px; }

@@ -78,20 +78,100 @@
 <!-- ========== MEALS TAB ========== -->
 <div id="meals" class="tab-page">
   <div class="page-header">
-    <h2 class="page-title">Meal Plan</h2>
-    <p class="page-sub">Tap meals to mark as eaten</p>
+    <h2 class="page-title">Meal Tracker</h2>
+    <p class="page-sub">Log what you eat · auto calorie count</p>
   </div>
 
+  <!-- Daily totals bar -->
   <div class="section">
     <div class="macro-bar">
-      <div class="macro-item"><span class="macro-val" id="cals-eaten">0</span><span class="macro-label">kcal eaten</span></div>
-      <div class="macro-item"><span class="macro-val" id="protein-eaten">0</span><span class="macro-label">g protein</span></div>
-      <div class="macro-item"><span class="macro-val" id="water-drunk">0</span><span class="macro-label">L water</span></div>
+      <div class="macro-item">
+        <span class="macro-val" id="cals-eaten">0</span>
+        <span class="macro-label">kcal</span>
+        <div class="macro-target" id="cals-target">/ 2,000</div>
+      </div>
+      <div class="macro-item">
+        <span class="macro-val" id="protein-eaten">0</span>
+        <span class="macro-label">protein</span>
+        <div class="macro-target" id="protein-target">/ 160g</div>
+      </div>
+      <div class="macro-item">
+        <span class="macro-val" id="carbs-eaten">0</span>
+        <span class="macro-label">carbs</span>
+        <div class="macro-target">g</div>
+      </div>
+      <div class="macro-item">
+        <span class="macro-val" id="fat-eaten">0</span>
+        <span class="macro-label">fat</span>
+        <div class="macro-target">g</div>
+      </div>
+    </div>
+    <div class="cal-bar-bg"><div class="cal-bar-fill" id="cal-bar"></div></div>
+  </div>
+
+  <!-- Add food -->
+  <div class="section">
+    <div class="add-food-card">
+      <div class="section-header" style="margin-bottom:12px">
+        <div class="section-icon" style="background:#ff6b1a22">➕</div>
+        <div class="section-title" style="color:var(--orange)">Add Food</div>
+      </div>
+      <div class="food-search-row">
+        <input type="text" id="food-search" class="log-input" placeholder="Search food (e.g. chicken breast, rice, eggs...)" autocomplete="off">
+      </div>
+      <div id="food-suggestions" class="food-suggestions"></div>
+      <div id="food-custom-form" class="food-custom-form" style="display:none">
+        <div class="custom-food-header">
+          <span id="custom-food-name">Custom Food</span>
+          <button class="modal-close" onclick="closeFoodForm()">&times;</button>
+        </div>
+        <div class="custom-food-inputs">
+          <div class="input-group">
+            <label>Serving (g)</label>
+            <input type="number" id="food-serving" class="modal-input" value="100" min="1">
+          </div>
+          <div class="input-group">
+            <label>Calories</label>
+            <input type="number" id="food-cals" class="modal-input" placeholder="kcal" min="0">
+          </div>
+          <div class="input-group">
+            <label>Protein (g)</label>
+            <input type="number" id="food-protein" class="modal-input" placeholder="g" min="0">
+          </div>
+          <div class="input-group">
+            <label>Carbs (g)</label>
+            <input type="number" id="food-carbs" class="modal-input" placeholder="g" min="0">
+          </div>
+          <div class="input-group">
+            <label>Fat (g)</label>
+            <input type="number" id="food-fat" class="modal-input" placeholder="g" min="0">
+          </div>
+        </div>
+        <button class="log-btn full-width" onclick="addCustomFood()">Add to Log</button>
+      </div>
+
+      <!-- Quick adds -->
+      <div class="quick-adds">
+        <span class="quick-label">Quick add:</span>
+        <button class="quick-btn" onclick="quickAdd('protein-shake')">Protein Shake</button>
+        <button class="quick-btn" onclick="quickAdd('simmer-lean')">Simmer Lean</button>
+        <button class="quick-btn" onclick="quickAdd('simmer-standard')">Simmer Std</button>
+        <button class="quick-btn" onclick="quickAdd('creatine')">Creatine</button>
+      </div>
     </div>
   </div>
 
-  <div class="section" id="meals-list"></div>
+  <!-- Today's food log -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background:#39d98a18">📋</div>
+      <div class="section-title" style="color:var(--green)">Today's Log</div>
+    </div>
+    <div class="section-divider"></div>
+    <div id="food-log" class="food-log"></div>
+  </div>
 
+  <!-- Water -->
   <div class="section">
     <div class="water-tracker">
       <div class="water-header">

@@ -1,4 +1,4 @@
-const CACHE = 'lockin-v2';
+const CACHE = 'lockin-v3';
 const ASSETS = [
   './',
   './index.html',

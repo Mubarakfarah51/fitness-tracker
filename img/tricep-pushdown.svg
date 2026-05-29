@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" fill="none">
+  <rect width="400" height="200" fill="#1a1a1a"/>
+  <!-- Cable machine -->
+  <rect x="195" y="15" width="10" height="120" rx="2" fill="#333"/>
+  <rect x="180" y="10" width="40" height="10" rx="3" fill="#444"/>
+  <!-- Figure -->
+  <ellipse cx="200" cy="60" rx="12" ry="12" fill="#ff6b1a" opacity="0.3"/>
+  <rect x="185" y="72" width="30" height="55" rx="6" fill="#ff6b1a" opacity="0.15"/>
+  <!-- Arms pushing down -->
+  <line x1="190" y1="85" x2="185" y2="115" stroke="#ff6b1a" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+  <line x1="210" y1="85" x2="215" y2="115" stroke="#ff6b1a" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+  <!-- Rope -->
+  <line x1="200" y1="45" x2="185" y2="115" stroke="#ff6b1a" stroke-width="2" opacity="0.4"/>
+  <line x1="200" y1="45" x2="215" y2="115" stroke="#ff6b1a" stroke-width="2" opacity="0.4"/>
+  <!-- Rope ends -->
+  <circle cx="185" cy="118" r="4" fill="#ff6b1a" opacity="0.6"/>
+  <circle cx="215" cy="118" r="4" fill="#ff6b1a" opacity="0.6"/>
+  <!-- Tricep highlight -->
+  <ellipse cx="180" cy="95" rx="5" ry="12" fill="#ff6b1a" opacity="0.12"/>
+  <ellipse cx="220" cy="95" rx="5" ry="12" fill="#ff6b1a" opacity="0.12"/>
+  <text x="200" y="165" text-anchor="middle" fill="#ff6b1a" font-family="sans-serif" font-size="14" font-weight="bold">TRICEP PUSHDOWN</text>
+  <text x="200" y="182" text-anchor="middle" fill="#888" font-family="sans-serif" font-size="11">Triceps</text>
+</svg>

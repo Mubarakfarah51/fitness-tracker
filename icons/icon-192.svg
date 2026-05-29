@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192">
+  <rect width="192" height="192" rx="40" fill="#0a0a0a"/>
+  <rect x="4" y="4" width="184" height="184" rx="38" fill="none" stroke="#ff6b1a" stroke-width="3" opacity="0.3"/>
+  <text x="96" y="88" text-anchor="middle" font-family="sans-serif" font-weight="bold" font-size="48" fill="#ff6b1a">L.I</text>
+  <text x="96" y="130" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#888" letter-spacing="4">LOCK IN</text>
+  <circle cx="96" cy="155" r="4" fill="#ff6b1a" opacity="0.5"/>
+</svg>

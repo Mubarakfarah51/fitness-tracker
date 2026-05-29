@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" fill="none">
+  <rect width="400" height="200" fill="#1a1a1a"/>
+  <!-- Bench -->
+  <rect x="140" y="120" width="140" height="10" rx="4" fill="#333"/>
+  <rect x="150" y="130" width="8" height="30" rx="2" fill="#444"/>
+  <rect x="262" y="130" width="8" height="30" rx="2" fill="#444"/>
+  <!-- Figure bent over -->
+  <ellipse cx="190" cy="90" rx="12" ry="12" fill="#ff6b1a" opacity="0.3"/>
+  <rect x="190" y="95" width="55" height="22" rx="6" fill="#ff6b1a" opacity="0.15" transform="rotate(15 215 106)"/>
+  <!-- Support arm on bench -->
+  <line x1="200" y1="100" x2="210" y2="118" stroke="#ff6b1a" stroke-width="3" stroke-linecap="round" opacity="0.3"/>
+  <!-- Rowing arm -->
+  <line x1="185" y1="100" x2="170" y2="130" stroke="#ff6b1a" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+  <!-- Dumbbell -->
+  <rect x="158" y="126" width="28" height="7" rx="3" fill="#ff6b1a"/>
+  <rect x="153" y="122" width="8" height="15" rx="3" fill="#ff6b1a" opacity="0.6"/>
+  <rect x="183" y="122" width="8" height="15" rx="3" fill="#ff6b1a" opacity="0.6"/>
+  <!-- Back/lat highlight -->
+  <ellipse cx="205" cy="100" rx="14" ry="10" fill="#ff6b1a" opacity="0.1"/>
+  <!-- Motion arrow -->
+  <path d="M170 140 L170 120" stroke="#ff6b1a" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.3" marker-end="url(#arr)"/>
+  <text x="200" y="180" text-anchor="middle" fill="#ff6b1a" font-family="sans-serif" font-size="14" font-weight="bold">SINGLE ARM DB ROW</text>
+  <text x="200" y="195" text-anchor="middle" fill="#888" font-family="sans-serif" font-size="11">Lats · Rhomboids</text>
+</svg>
